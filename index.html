@@ -9,7 +9,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+        html,
         body {
+            height: 100%;
             background-color: #1a1a1a;
         }
 
@@ -71,42 +73,58 @@
         /* Hide main content initially */
         .main-content {
             display: none;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Custom gradient background for footer */
         .footer-gradient {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #111111 100%);
+            margin-top: auto;
+            /* Push footer to bottom */
+        }
+
+        /* Content wrapper to ensure proper spacing */
+        .content-wrapper {
+            flex: 1 0 auto;
+            /* Take up available space but allow growing */
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body>
     <!-- Splash Screen -->
     <div class="splash-screen" id="splashScreen">
         <div class="splash-text">
-            <h1 class="text-4xl mb-4 font-bold">👆 Click Anywhere to Begin</h1>
-            <p class="text-lg opacity-75">(Make sure your volume is on)</p>
+            <h1 class="text-4xl mb-4 font-bold">👆 Click for free V-bucks.</h1>
+            <p class="text-lg opacity-75">(For real.)</p>
         </div>
     </div>
 
     <!-- Main content (hidden initially) -->
     <div class="main-content" id="mainContent">
-        <main class="flex-grow flex flex-col items-center justify-center p-4 sm:p-6 md:p-8">
-            <h1 class="custom-heading text-3xl sm:text-4xl md:text-5xl mb-8 md:mb-12 text-center leading-tight px-4">
-                Get Rickrolled <br class="md:hidden">hehe
-            </h1>
+        <div class="content-wrapper">
+            <main class="flex-grow flex flex-col items-center justify-center p-4 sm:p-6 md:p-8">
+                <h1
+                    class="custom-heading text-3xl sm:text-4xl md:text-5xl mb-8 md:mb-12 text-center leading-tight px-4">
+                    Get Rickrolled <br class="md:hidden">Hehe
+                </h1>
 
-            <div class="w-full max-w-3xl px-4 sm:px-6 md:px-8">
-                <div class="video-container">
-                    <video class="video-player" controls loop playsinline>
-                        <source src="images/totally-not-rickroll.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="w-full max-w-3xl px-4 sm:px-6 md:px-8">
+                    <div class="video-container">
+                        <video class="video-player" controls loop playsinline>
+                            <source src="images/totally-not-rickroll.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
 
-        <footer class="footer-gradient text-gray-400 py-6 sm:py-8 px-4 text-center mt-12">
+        <footer class="footer-gradient text-gray-400 py-6 sm:py-8 px-4 text-center w-full">
             <p class="text-xs sm:text-sm opacity-75">&copy; 2024 MrSandy. All rights reserved.</p>
         </footer>
     </div>
@@ -124,7 +142,7 @@
                 splashScreen.style.transition = 'opacity 0.5s';
 
                 // Show main content
-                mainContent.style.display = 'block';
+                mainContent.style.display = 'flex'; // Changed to flex to maintain layout
 
                 // Play video with sound
                 try {
