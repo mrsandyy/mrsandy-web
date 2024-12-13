@@ -4,7 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrSandy</title>
+    <meta name="description"
+        content="Welcome to Mr Sandy's official website. Sandeep Vishnoi is a Developer, Graphics Designer, and Artist sharing creative works and technical expertise.">
+    <meta name="keywords" content="Mr Sandy, Sandeep Vishnoi, Developer, Graphics Designer, Artist, Portfolio">
+    <meta name="author" content="Sandeep Vishnoi">
+    <link rel="canonical" href="https://mrsandy.in">
+
+    <!-- Favicons -->
+    <!-- Default Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/x-icon">
+
+    <!-- Standered  -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" sizes="180x180">
+
+    <!-- Android Chrome Icon -->
+    <link rel="icon" href="images/favicon/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="images/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png">
+
+    <!-- Web Manifest (for PWA) -->
+    <link rel="manifest" href="/site.webmanifest">
+
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Mr Sandy | Developer, Graphics Designer & Artist">
+    <meta property="og:description"
+        content="Explore the works and projects of Mr Sandy (Sandeep Vishnoi), a skilled Developer, Graphics Designer, and Artist.">
+    <meta property="og:url" content="https://mrsandy.in/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mr Sandy | Developer, Graphics Designer & Artist">
+    <meta name="twitter:description"
+        content="Discover Sandeep Vishnoi's projects in development, graphic design, and art.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sandeep Vishnoi",
+            "alternateName": "Mr Sandy",
+            "description": "A Developer, Graphics Designer & Artist.",
+            "url": "https://mrsandy.in/",
+            "sameAs": [
+                "https://twitter.com/_MrSandy_",
+                "https://x.com/_MrSandy_",
+                "https://github.com/mrsandyy",
+                "https://instagram.com/mrsandyy_",
+                "https://instagram.com/_MrSandy_"
+            ]
+        }
+    </script>
+
+    <title>Mr Sandy | Developer & Graphics Designer & Artist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
@@ -95,6 +152,16 @@
     </style>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7DRPY7FCCD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7DRPY7FCCD');
+</script>
+
 <body>
     <!-- Splash Screen -->
     <div class="splash-screen" id="splashScreen">
@@ -116,7 +183,8 @@
                 <div class="w-full max-w-3xl px-4 sm:px-6 md:px-8">
                     <div class="video-container">
                         <video class="video-player" controls loop playsinline>
-                            <source src="images/totally-not-rickroll.mp4" type="video/mp4">
+                            <source src="images/totally-not-rickroll.mp4" type="video/mp4"
+                                alt="Never Gonna Give You Up - Rick Astley">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -125,7 +193,7 @@
         </div>
 
         <footer class="footer-gradient text-gray-400 py-6 sm:py-8 px-4 text-center w-full">
-            <p class="text-xs sm:text-sm opacity-75">&copy; 2024 MrSandy. All rights reserved.</p>
+            <p class="text-xs sm:text-sm opacity-75">&copy; 2024 Mr Sandy (Sandeep Vishnoi). All rights reserved.</p>
         </footer>
     </div>
 
